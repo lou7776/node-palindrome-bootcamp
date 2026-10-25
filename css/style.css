@@ -1,3 +1,119 @@
-h1{
-  color: red;
+ @import url('https://googleapis.com');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-family: "Tilt Neon", system-ui, sans-serif;
+  text-align: center;
+  color: #dffcff;
+  background-color: #1d1015;
+  background-image: 
+    radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.8) 100%), 
+    url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='80' height='80'%3E%3Cpath d='M0 0H80M0 40H80M0 0V40M40 40V80' stroke='%23080306' stroke-width='4' fill='none'/%3E%3C/svg%3E");
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ffd6f0;
+  text-shadow: 
+    0 0 4px #ffffff, 
+    0 0 12px #ff2bd6, 
+    0 0 24px #ff2bd6, 
+    0 0 48px #ff2bd6;
+  animation: intro-flicker 1.4s ease-out 1;
+}
+
+input {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px 18px;
+  font-family: inherit;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #dffcff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #2bf0ff;
+  border-radius: 8px;
+  box-shadow: 
+    0 0 8px rgba(43, 240, 255, 0.5), 
+    inset 0 0 8px rgba(43, 240, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+input::placeholder {
+  color: rgba(223, 252, 255, 0.4);
+}
+
+input:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+  box-shadow: 
+    0 0 16px rgba(43, 240, 255, 0.8), 
+    inset 0 0 12px rgba(43, 240, 255, 0.4);
+}
+
+button {
+  padding: 12px 36px;
+  font-family: inherit;
+  font-size: 1.15rem;
+  color: #ffd6f0;
+  background: transparent;
+  border: 2px solid #ff2bd6;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 
+    0 0 10px rgba(255, 43, 214, 0.5), 
+    inset 0 0 10px rgba(255, 43, 214, 0.2);
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: #ff2bd6;
+  color: #1d1015;
+  box-shadow: 0 0 20px #ff2bd6;
+}
+
+button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+#choice {
+  margin-top: 20px;
+  margin-bottom: 0;
+  min-height: 50px;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  overflow-wrap: anywhere;
+  text-shadow: 0 0 8px rgba(43, 240, 255, 0.8);
+}
+
+#choice.match {
+  color: #d9ffe8;
+  text-shadow: 
+    0 0 6px #ffffff, 
+    0 0 18px #39ff88, 
+    0 0 36px #39ff88;
+}
+
+#choice.nomatch {
+  color: #ffdadd;
+  text-shadow: 
+    0 0 6px #ffffff, 
+    0 0 18px #ff3b4e, 
+    0 0 36px #ff3b4e;
 }

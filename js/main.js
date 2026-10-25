@@ -10,7 +10,9 @@ console.log(paliEntered)
     .then(response => response.json())
     .then((data) => {
       console.log(data);
-      document.querySelector("#choice").textContent = data.isPaliOutcome
+      const result = document.querySelector('#choice')
+      result.textContent = data.isPaliOutcome
+      result.className = data.isPaliOutcome.endsWith('is not Palindrome') ? 'nomatch' : 'match'
 
     });
 
